@@ -1,7 +1,29 @@
 
-    .body { 
-    color: var(--primary-text-color);
-    background: var(--primary-bg-color); 
+    body { 
+        color: var(--primary-text-color);
+        background: var(--primary-bg-color); 
+        font-family: var(--primary-font-family);
+        font-size: var(--primary-font-size);
     }
+     @import url(https://fonts.google.com/);
+
+     h1, h2, h3 {
+        font-weight: 700;
+     }
+     h1 {
+        font-size: 1.45rem;
+     }
+     h2 {
+        font-size: 1.3rem
+     }
+     .list-unstyled {
+        list-style: none
+     }
+     .footer-social {
+        font-style: italic;
+        font-size: medium;
+        text-decoration: underline;
+     }
+     
 
  
