@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+	<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    <style>
+        .negative {
+            background: linear-gradient(to left, #87CEFA -50%, #6495ED -10%, #0000FF 0%, #0000CD 100%, #191970 150%); 
+        }
+        .percents {
+            background: linear-gradient(to bottom, #00FF00 2em, #00FF00 4em, #3CB371 8em, #3CB371 16em, #228B22 32em, #008000 64em, #006400 128em);
+        }
+        .radial {
+            background: radial-gradient(ellipse at bottom, orange, transparent),
+                        radial-gradient(ellipse at top, red, transparent);  
+        }
+        
+
+
+    </style>
+</head>
+
+<body class="body">
+    
+    <h1>Gradient Text Glow</h1>
+
+    <div class="percents">
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis cum magnam quae adipisci minima illum porro eius ipsa rem. Sequi eaque facere necessitatibus fugiat rerum facilis reprehenderit numquam dignissimos itaque!
+    </div>
+
+    <div class="negative">
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis cum magnam quae adipisci minima illum porro eius ipsa rem. Sequi eaque facere necessitatibus fugiat rerum facilis reprehenderit numquam dignissimos itaque!
+    </div>
+
+    <div class="radial">
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis cum magnam quae adipisci minima illum porro eius ipsa rem. Sequi eaque facere necessitatibus fugiat rerum facilis reprehenderit numquam dignissimos itaque!
+    </div>
+    <svg>
+        <rect width="100" 
+        height="100"
+        x="20" y="20" rx="20" ry="20"
+        stroke="#1c87c9" 
+        stroke-width="4"
+        fill="lightgray"
+        />
+    </svg>
+    <svg>
+        <circle
+        width="150" 
+        height="150"
+        cx="100"cy="70"r="60"
+        stroke="red" 
+        stroke-width="4"
+        fill="lightgray"
+        />
+    </svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"
+        width="200" height="200"
+        stroke="red"
+        fill="pink">
+        <path d="M464 256A208 208 0 1 1 48 256a208 208 0 1 1 416 0zM0 256a256 256 0 1 0 512 
+        0A256 256 0 1 0 0 256zM232 120V256c0 8 4 15.5 10.7 20l96 7c9 0.0 25.0.0 
+        33.3-6.7s4.4-25.9-6.7-33.3L280 243.2V120c0-13.3-10.7-24-24-24s-24 10.7-24 24z"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"
+         width="200" height="200"
+         stroke="black" 
+         stroke-width="2"
+         fill="lightgray">
+    <path d="M464 256A208 208 0 1 0 48 256a208 208 0 1 0 416 0zM0 256a256 256 0 1 1 512 
+    0A256 256 0 1 1 0 256zm177.6 62.1C192.8 334.5 218.8 352 256 
+    352s63.2-17.5 78.4-33.9c9-9.7 24.2-10.4 33.9-1.4s10.4 24.2 1.4 33.9c-22 23.8-60 49.4-113.6 
+    49.4s-91.7-25.5-113.6-49.4c-9-9.7-8.4-24.9 1.4-33.9s24.9-8.4 33.9 1.4zM144.4 
+    208a32 32 0 1 1 64 0 32 32 0 1 1 -64 0zm192-32a32 32 0 1 1 0 64 32 32 0 1 1 0-64z"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg"
+ width="200" height="200" viewBox="0 0 960.000000 960.000000">
+<g transform="translate(0.000000,960.000000) scale(0.100000,-0.100000)"
+fill="indigo" stroke="2">
+<path d="M4435 8545 c-732 -74 -1409 -350 -1990 -811 -151 -120 -461 -432
+-584 -588 -318 -401 -550 -853 -686 -1337 -180 -639 -180 -1379 0 -2018 136
+-484 368 -937 686 -1337 131 -165 428 -462 593 -593 681 -540 1482 -821 2346
+-821 864 0 1665 281 2346 821 165 131 462 428 593 593 540 681 821 1482 821
+2346 0 597 -129 1146 -391 1671 -190 381 -403 675 -713 985 -323 323 -627 540
+-1029 734 -416 201 -809 310 -1277 355 -177 18 -539 17 -715 0z m722 -325
+c979 -106 1849 -609 2426 -1402 867 -1192 873 -2817 14 -4016 -220 -307 -473
+-562 -779 -785 -1192 -867 -2817 -873 -4016 -14 -594 425 -1032 1018 -1262
+1707 -123 369 -173 685 -173 1090 0 249 8 360 44 575 207 1245 1097 2284 2299
+2685 292 97 573 151 910 174 90 6 432 -3 537 -14z"/>
+<path d="M4740 8053 c-24 -9 -70 -55 -86 -85 -10 -19 -14 -64 -14 -151 0 -112
+2 -127 23 -158 35 -52 82 -79 137 -79 55 0 102 27 137 79 21 31 23 46 23 158
+0 135 -6 157 -59 207 -26 25 -41 30 -88 33 -32 1 -65 0 -73 -4z"/>
+<path d="M3185 7634 c-71 -37 -99 -85 -93 -158 6 -69 101 -234 155 -267 78
+-48 188 -16 228 67 29 62 17 116 -51 230 -50 84 -66 102 -104 122 -52 26 -93
+28 -135 6z"/>
+<path d="M6280 7628 c-38 -19 -54 -38 -104 -122 -68 -114 -80 -168 -51 -230
+40 -83 150 -115 228 -67 54 33 149 198 155 267 11 126 -115 210 -228 152z"/>
+<path d="M4713 7338 c-18 -13 -41 -39 -52 -59 -21 -36 -21 -46 -21 -1149 l0
+-1112 -24 -19 c-43 -33 -86 -134 -86 -199 0 -145 124 -269 271 -270 64 0 165
+44 198 86 l19 24 897 0 c1004 0 942 -5 993 72 36 55 36 121 0 176 -51 77 11
+72 -991 72 l-895 0 -31 31 -31 31 0 1110 c0 1101 0 1111 -21 1147 -31 55 -75
+81 -140 81 -40 0 -63 -6 -86 -22z"/>
+<path d="M2034 6492 c-77 -49 -102 -135 -62 -212 19 -38 38 -54 122 -104 114
+-68 168 -80 230 -51 53 25 90 85 90 144 0 75 -29 111 -142 178 -80 47 -107 58
+-152 60 -42 3 -62 -1 -86 -15z"/>
+<path d="M7430 6503 c-8 -3 -56 -30 -107 -60 -107 -63 -137 -100 -137 -174 0
+-59 37 -119 90 -144 62 -29 116 -17 230 51 84 50 103 66 122 104 41 79 10 175
+-68 215 -28 15 -100 19 -130 8z"/>
+<path d="M1625 4941 c-65 -40 -80 -67 -80 -141 0 -63 3 -71 30 -100 51 -54 72
+-60 208 -60 112 0 127 2 158 23 106 71 106 203 0 274 -31 21 -45 23 -160 23
+-105 0 -131 -3 -156 -19z"/>
+<path d="M7659 4937 c-52 -35 -79 -82 -79 -137 0 -55 27 -102 79 -137 31 -21
+46 -23 158 -23 136 0 157 6 208 60 27 29 30 37 30 100 0 63 -3 71 -30 100 -51
+54 -72 60 -208 60 -112 0 -127 -2 -158 -23z"/>
+<path d="M2154 3459 c-126 -68 -164 -97 -186 -146 -25 -57 -20 -111 17 -158
+65 -86 142 -87 287 -2 113 67 142 103 142 178 0 89 -72 159 -162 159 -25 0
+-61 -11 -98 -31z"/>
+<path d="M7271 3474 c-79 -41 -109 -151 -62 -227 33 -54 198 -149 267 -155
+126 -11 210 115 152 228 -19 38 -38 54 -122 104 -113 68 -174 81 -235 50z"/>
+<path d="M3289 2411 c-52 -17 -81 -46 -136 -140 -85 -144 -84 -221 2 -287 49
+-37 108 -42 165 -12 38 19 54 38 104 122 68 114 80 168 51 230 -31 65 -122
+107 -186 87z"/>
+<path d="M6228 2410 c-78 -24 -123 -91 -116 -170 4 -35 20 -73 64 -146 50 -84
+66 -103 104 -122 113 -58 239 26 228 152 -6 66 -102 234 -151 264 -39 25 -93
+34 -129 22z"/>
+<path d="M4719 1997 c-18 -12 -44 -38 -56 -56 -21 -31 -23 -46 -23 -158 0
+-136 6 -157 60 -208 29 -27 37 -30 100 -30 63 0 71 3 100 30 54 51 60 72 60
+208 0 112 -2 127 -23 158 -35 52 -82 79 -137 79 -32 0 -58 -7 -81 -23z"/>
+</g>
+</svg>
+</body>
+</html>
