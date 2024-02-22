@@ -10,14 +10,13 @@
     </style>
 </head>
 <body>
-	<p style="color: blue;">This is my paragraph</p>	   
-
+	<p style="color: blue;">This is my paragraph</p>
+    <!--/* style="color: blue;" має пріоритет перед p { color: red;}, тому текст синій */-->	   
     <h2>Сторінка Вікіпедії для мови CSS</h2>
 	<iframe src="https://uk.wikipedia.org/wiki/CSS" 
 	title="Сторінка Вікіпедії для мови CSS"></iframe>
-
 </body>
-
+    
 <head>
 	<style>
 		#exciting {
@@ -48,10 +47,11 @@
         --bgColor: limegreen;
         }
 		p {
-			background: var(--bgColor);
+		background: var(--bgColor);
 		}
 		h1 {color: blue;}
-
+/* змінна --bgColor не буде видимою для елемента body, тому body не має кольору,
+а дочірні елементи будуть бачити --bgColor, в них колір буде limegreen. */
     </style>
     <style>
         @import url("my-imported-styles.css");
@@ -70,7 +70,7 @@
 
     <div>
     <h3>Новини</h3>
-        <p>Мінус ворожий корабель у Чорному морі.</p>
+        <p>Мінус ворожий корабель у Чорному морі.</p> 
     </div>
 
     <div>
