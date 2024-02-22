@@ -1,12 +1,12 @@
 div {
-    font-size: 2.56em;
+    font-size: 1em;
 }
-div span {
-    font-size: 0.625em;
+span {
+    font-size: 1.6em;
 }
-div strong {
-    font-size: 25.6px;
-    /*do not do something like this! */
+strong {
+    font-size: 1.6rem;
+   
 }
 ul { 
     list-style-type: square; 
