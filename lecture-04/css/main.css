@@ -2,7 +2,7 @@ h1, h2, h3 {
     color:gray;
 }
 #main {
-    color: #e60202;
+    color: red;
 }
 .h2 {
     color: red;
@@ -22,13 +22,13 @@ section > p {
  h2:first-of-type + h2 {
     color: indigo;
 }
-.first a {
+p.first a {
     color: green;
 }
-.first {
+p .first {
     color: green;
 }
-div > p {
+div ~ p {
     color: salmon;
 }
 .translucent-box {
