@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Document</title>
+
+	<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+
+    <style>
+        .wrapper {
+            
+            display: flex;
+            flex-wrap: wrap;
+            width: 700px;
+            
+        }
+
+        .item-blue {
+            background-color: blue;
+            z-index: 3;
+        }
+        .item-orange {
+            background-color:orange; 
+            
+        }
+        .item-green {
+            background-color:green;
+            z-index: 1;
+        }
+
+        .item {
+     
+            color: white;
+            width: 100px;
+            /*flex: 0 1 33.333%*/
+        }
+        /* якщо елементи не на всю ширину екрану, то ширина кожного 100рх,
+           якщо працює flex, то ширина кожного 700/3=233,33*/
+    </style>
+
+</head>
+<body>
+    <h2>CSS Flex Property</h2>
+    <div class="wrapper">
+        <div class="item item-blue">CSS</div>
+        <div class="item item-orange">Flex</div>
+        <div class="item item-green">Property</div>
+    </div>
+</body>
+</html>
