@@ -19,7 +19,7 @@
 
         .item-blue {
             background-color: blue;
-            z-index: 3;
+            flex-grow: 3;
         }
         .item-orange {
             background-color:orange; 
@@ -27,7 +27,7 @@
         }
         .item-green {
             background-color:green;
-            z-index: 1;
+            flex-grow: 1;
         }
 
         .item {
@@ -36,8 +36,9 @@
             width: 100px;
             /*flex: 0 1 33.333%*/
         }
-        /* якщо елементи не на всю ширину екрану, то ширина кожного 100рх,
-           якщо працює flex, то ширина кожного 700/3=233,33*/
+        /* .item-green - flex-grow: 1 - 1/4 * 400 + 100 (оригінальна ширина) = 100 + 100 = 200
+           .item-orange - flex-grow: 0 (не вказано) - 0/4 * 400 + 100 = 0 + 100 = 100
+           .item-blue - flex-grow: 3 - 3/4 * 400 + 100 = 300 + 100 = 400*/
     </style>
 
 </head>
