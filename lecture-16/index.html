@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+	  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+
+</head>
+<body>
+    <h1>Hello, javascript!</h1>
+
+    <script>
+        /*let message1 = "Hello";
+        let message2 = " JavaScript";
+        alert(message1 + message2 + "!");*/       
+    </script>
+
+     <script>
+        /*'use strict';       
+        let message = "hello";
+        message = 123456;  */
+        /*так я виправила помилку, але змінна "hello" в данному випадку ігорується, 
+        можливо треба змінити message = 123456 на message_1 = 123456 (не дуже зрозуміло запитання)*/   
+      </script>
+
+     <script>      
+        /*let x = +prompt ('x?', '');
+        let y = +prompt ('y?', '');
+        let result = x + y;
+        alert(result);*/
+     </script>
+
+    <script>
+       /* 'use strict';
+        let a = 9007199254740991;
+        let b = 9007199254740991n;
+        console.log (BigInt(a) + b);   */
+    </script>
+
+     <script>
+       /* 'use strict';
+        let apples = +"2";
+        let oranges = +"3";
+        alert(apples + oranges);*/
+    </script>  
+
+    <script>
+        /*'use strict';
+        let a = 1, b = 1;
+        let c = ++a; // 2
+        let d = b++; // 1   */ 
+    </script> 
+
+     <script>
+        /*'use strict';
+        let a = 2;
+        let x = 1 + (a *= 2);  //a=4, x=5*/
+    </script>
+
+     <script>
+        'use strict';
+
+        "" + 1 + 0  //10
+        "" - 1 + 0  //-1
+        true + false //1
+        6 / "3"    //2
+        "2" * "3"   //6
+        4 + 5 + "px" //9px
+        "$" + 4 + 5  //$45
+        "4" - 2      //2
+        "4px" - 2    //NaN
+        "  -9  " + 5  //-9 5
+        "  -9  " - 5  //-14
+        null + 1      //1
+        undefined + 1 //NaN
+        NaN + 1       //NaN
+
+    </script>
+    
+    <script>
+        'use strict';
+        // скоротити цей код за допомогою операторів += і *=:
+        let n = 2;
+        /*n = n + 5;
+        n = n * 2;*/
+        n += 5;
+        n *= 2;
+
+    </script>
+
+     <script>
+        let n1 = Number("   123   ");
+        let n2 = Number("123z");
+        let n3 = Number(true);
+        let n4 = Number(false);
+
+        console.log(n1, n2, n3, n4);
+        // "123z" неможливо перетворити на число 
+    </script>
+</body>
+</html>
