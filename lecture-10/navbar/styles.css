@@ -13,7 +13,8 @@
     color: white;
     display: flex;
     padding: 0 .5rem;
-    align-content: center;
+    align-items: center;
+    justify-content: space-between;
   }
   
   .link-list {
@@ -21,7 +22,6 @@
     margin: 0;
     list-style: none;
     
-    justify-content: flex-end;
   }
   
   .link {
@@ -37,6 +37,4 @@
     text-decoration: none;
   }
 
-  span {
-    justify-content: flex-start;
-  }
+  

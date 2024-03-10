@@ -14,4 +14,5 @@ body {
   .card {
     flex: 0 1 16.6%;
     flex-basis: var(--min);
+    /*flex: 0 1 var(--min);*/
   }
