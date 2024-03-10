@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+<body>
+    <script>
+
+        /*let x = 3
+        let y = 4
+
+        x == 3  //true
+        x === "3" //false
+        x != 5    //true
+        x !== "5" //true
+        x !== 3  //false
+        y > 5    //false
+        y >= 3   //true
+        y < 5    //true
+        y <= 2   //false
+        1 == true  //true
+        null == undefined  //true
+        NaN == NaN*/  //false
+        
+    </script>
+
+     <script>
+        //let x = 3;
+        //let y = 4;
+        //let z = 5;
+
+        /*x ||= y;     //3
+        x || (y = z);  //3
+        x &&= y;       //4
+        x && (y = z);  //5
+        x ??= y;       //3
+        x ?? (y = z);*/ //3
+
+    </script>
+
+    <script>
+        let a = 1;
+            if (a < 3) {
+                console.log('The number is short');
+            } else if (a > 3) {
+                console.log('The number is too long');
+            } else if (a = 3) {
+            console.log('Congratulations, You did it!');
+        }
+    </script>
+
+    <script>
+        let num = 3;
+            switch (true) {
+                case num < 3:
+                    console.log("The number is short");
+                    break;
+                case num > 3:
+                    console.log("The number is too long");
+                    break;
+                default:
+                    console.log("Congratulations, You did it!");
+            }
+    </script>
+    
+     <script>
+        let weekday = 'Freiday';
+            if ('Monday' || 'Понеділок') {
+                console.log('Start of the work week!');
+            } else if ('Freiday' || 'П\'ятниця') {
+                console.log('End of the work week!');
+            } else {
+                console.log('A regular day');
+            }
+              
+    </script>
+
+    <script>
+        let day = "Saturday";
+            switch (day) {
+                case "Monday":
+                case "Понеділок":
+                    console.log("Start of the work week!");
+                    break;
+                case "Freiday": 
+                case "П\'ятниця":
+                    console.log("End of the work week!");
+                    break;
+                default:
+                    console.log("A regular day");
+            }
+        </script>
+    
+    <script>
+        // let score = 35;
+        // if (score <= 50) {
+        //     console.log('grade "F"');
+        // } else if (score > 50 && score <= 70) {
+        //     console.log('grade "D"');
+        // } else if (score > 70 && score <= 80) {
+        //     console.log('grade "C"');
+        // } else if (score > 80 && score <= 90) {
+        //     console.log('grade "B"');
+        // } else {
+        //     console.log('grade "A"');
+        // }
+    </script>
+
+    <script>
+        let score = 90;
+        const grade =
+             console.log(score <= 50 ? 'grade "F"' : 
+             score > 50 && score <= 70 ? 'grade "D"' :
+             score > 70 && score <= 80 ? 'grade "C"' :
+             score > 80 && score <= 90 ? 'grade "B"' :
+              'grade "A"');
+    </script>
+
+     <script>
+        let firstName = null;
+        let lastName = undefined;
+        let username = (firstName || lastName) ?? "Guest";
+
+        console.log(username); // "Guest"
+    </script>
+    </body>
+    
+    </html>
