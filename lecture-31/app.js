@@ -38,12 +38,15 @@ xhrPromise("GET", url)
     document.getElementById("blog").innerHTML = result;
 })
 
-new Promise("GET", "https://jsonplaceholder.typicode.com/users")
-    .then(response => {
-        let users = JSON.parse(response)
-        let result = ''
-        users.forEach(user => {
-            result += template(user)
-        })
-        document.getElementById("userId").innerHTML = result;
-})
+.then( () => {
+    const users  = document.querySelectorAll('.author');
+    users.forEach(user => {
+      xhrPromise("GET", `https://jsonplaceholder.typicode.com/users/${user.dataset.id}`)
+      .then(response => {
+        let userName = JSON.parse(response)
+        console.log(userName.name)
+        user.textContent = userName.name
+      })
+    })
+  
+  });
