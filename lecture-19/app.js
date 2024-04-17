@@ -26,39 +26,44 @@ console.log(str3.charAt(15));
 //що повертає останній символ рядка
 
 function lastChar() {
-    return (str3[str3.length - 1]);
+    return str[str.length - 1];
 }
-console.log(lastChar());
+console.log(lastChar(str3));
 
-function lastChar() {
-    return (str3.slice(15));
+function lastChar(str) {
+    return str.slice(-1);
 }
-console.log(lastChar());
+console.log(lastChar(str3));
 
-function lastChar() {
-    return (str3.substr(-1));
+function lastChar(str) {
+    return (str.substr(-1));
 }
-console.log(lastChar());
+console.log(lastChar(str3));
 
 
 let a = 'When candles are out,';
 let b = 'all cats are grey.';
 console.log(a, ''.concat(b));
-
+console.log(a.concat(' ', b));
 
 // let fact = "Fifteen is the same as"
 // let a = 5;
 // let b = 10;
-// fact = fact + ' ' + (a + b);
+
+// fact = ${fact} ${a + b};
 // console.log(fact);
 
-let firstName = 'Tom';
-let lastName = 'Cat';
-function getFullName() { 
-    return firstName + ' ' + lastName; 
+// let firstName = 'Tom';
+// let lastName = 'Cat';
+// function getFullName(firstName, lastName) {
+//     return firstName + ' ' + lastName;
+//     }
     
-}
-console.log(getFullName());
+//     let firstName = 'Tom';
+//     let lastName = 'Cat';
+    
+//     console.log(getFullName(firstName, lastName));
+
 
 greeting = "Hello, " + getFullName() + "!";
 console.log(greeting);
@@ -89,10 +94,10 @@ let sentence = 'Always look on the bright side of life';
 console.log(new String(sentence));
 // Перевірити, чи містить рядок значення 'look up'
 let pattern = 'look up';
-if((sentence.search(pattern)) >= 0) { 
-    console.log('It is');
+if((sentence.includes(pattern)) >= 0) { 
+    console.log(true);
 } else {
-    console.log('Not found');
+    console.log(false);
 };
 
 
