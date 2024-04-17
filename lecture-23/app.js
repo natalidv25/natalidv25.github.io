@@ -1,51 +1,41 @@
-const alert = document.querySelector('.alert');
-//tack 1
 
-const onmouseover = document.querySelector(".btn-primary");
-console.log(onmouseover);
-onmouseover.addEventListener("mouseover", function() { 
-     alert.classList.add('alert-primary');
-     alert.textContent = "A simple primary alert—check it out!";
-     console.log(alert);
-     console.log(alert.textContent);
-    })
+//tack 1
+const alertBox = document.querySelector('.alert');
+const primaryButton = document.querySelector(".btn-primary");
+
+primaryButton.addEventListener("click", function() {
+alertBox.classList.add('alert-primary');
+alertBox.textContent = "A simple primary alert—check it out!";
+});
+
 
 //tack 2
 
-const click = document.querySelector(".btn-secondary");
-console.log(click);
-click.addEventListener('click', function() {
-     console.log(click);
-})
-click.addEventListener("click", function() { 
-    alert.classList.add('alert-primary');
-    alert.textContent = "A simple secondary alert—check it out!";
-    console.log(alert);
-    console.log(alert.textContent);
-})
+const secondaryButton = document.querySelector(".btn-secondary");
+
+secondaryButton.addEventListener("click", function() {
+alertBox.classList.add('alert-primary');
+alertBox.textContent = "A simple secondary alert—check it out!";
+console.log(secondaryButton);
+console.log(alertBox);
+console.log(alertBox.textContent);
+});
 
 //tack 3
+const successButton = document.querySelector(".btn-success");
 
-const mouseover = document.querySelector(".btn-success");
-console.log(mouseover);
-mouseover.addEventListener('mouseover', function() {
-     console.log(mouseover);
-})
-mouseover.addEventListener("mouseover", function() { 
-    alert.classList.add('alert-success');
-    alert.textContent = "A simple success alert—check it out!";
-    console.log(alert);
-    console.log(alert.textContent);
-})
+successButton.addEventListener('mouseover', function() {
+alertBox.classList.add('alert-success');
+alertBox.textContent = "A simple success alert—check it out!";
+console.log(alertBox);
+});
 
-const mouseout = document.querySelector(".btn-success");
-console.log(mouseout);
-mouseover.addEventListener("mouseover", function() { 
-    alert.classList.remove('alert-success');
-    alert.textContent = " ";
-    console.log(alert);
-    console.log(alert.textContent);
-})
+// Додаємо прослуховувач події "mouseout"
+successButton.addEventListener('mouseout', function() {
+alertBox.classList.remove('alert-success');
+alertBox.textContent = "";
+console.log(alertBox);
+});
 
 // tack 4
 
@@ -95,33 +85,37 @@ function toggleMode() {
 
 // tack 6
 
-const keypress = document.querySelector(".btn-info");
-// console.log(keypress);
-keypress.addEventListener('keypress', function (e) {
-    if (e.key === 'ENTER') {
-        e.preventDefault();
-        alert.classList.remove('alert-info');
-        alert.textContent = "A simple info alert—check it out!";
-    }
-})
+const keypressButton = document.querySelector(".btn-info");
 
+keypressButton.addEventListener('keypress', function (e) {
+if (e.key === 'Enter') {
+e.preventDefault();
+alertBox.classList.add('alert-info');
+alertBox.textContent = "A simple info alert—check it out!";
+console.log(alertBox.textContent);
+}
+});
 
 // tack 7
-const card = document.querySelectorAll('.card');
-console.log(card);
-const ctitle = document.querySelectorAll('.card-title');
-for (const ctitle of card) { 
-    console.log(ctitle.innerText); 
-}
 
+const cards = document.querySelectorAll('.card');
+console.log(cards); // Логуємо всі карточки для перевірки
+
+for (const card of cards) {
+const cardTitle = card.querySelector('.card-title');
+if (cardTitle) {
+console.log(cardTitle.innerText);
+}
+}
 // tack 8
 
-const addcard = document.querySelectorAll('.add-to-cart');
-console.log(addcard);
-for (const addcard of card) {
-    addcard.addEventListener('click', function () {
-        console.log(addcard.textContent);
-        
+for (const card of cards) {
+const addToCartButton = card.querySelector('.add-to-cart');
+const cardTitle = card.querySelector('.card-title');
+
+if (addToCartButton && cardTitle) {
+    addToCartButton.addEventListener('click', function () {
+        console.log(cardTitle.textContent); 
     });
 }
-
+}
