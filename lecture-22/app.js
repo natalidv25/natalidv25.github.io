@@ -2,7 +2,7 @@ const classes = ['first', 'second', 'third', 'fourth'];
 
 
 const allh1 = document.querySelectorAll("h1"); 
-for (i = 0; i < allh1.length; i++) { 
+for (let i = 0; i < allh1.length; i++) { 
     console.log(allh1[i]); 
 }
 for (let h1 of allh1) {
@@ -71,9 +71,9 @@ for ( const h1 of headers ) {
 // до h3 додати клас third
 // до h4 додати клас fourth
 
-
-for (j = 0; j < headers.length; j++) {
-     const elem  = headers.querySelectorAll('h[j+1]').classList.add(classes[j]);  
-   }
-
+for (let j = 0; j < headers.length; j++) {
+     if (headers[j].querySelector(`h${j + 1}`)) {
+     headers[j].querySelector(`h${j + 1}`).classList.add(classes[j]);
+     }
+     }
  
