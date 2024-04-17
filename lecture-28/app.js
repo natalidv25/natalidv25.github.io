@@ -1,33 +1,50 @@
-const form = document.querySelector('registrationForm'); 
-form.addEventListener('submit', function(event) { 
-    event.preventDefault(); 
-    const username = document.getElementById('username').value;
-    const email = document.getElementById('email').value; 
-    const password = document.getElementById('password').value;
-    const error = document.getElementById('errorMessages');
-    if (!emailIsValid(email)) { 
-        error = 'Please enter a valid email address.'; 
-        return;
-    } if (password.length < 8) { 
-        error = 'Password must be at least 8 characters long.'; 
-        return;
-    } if (username == '') {
-        error = 'Pleas enter a username';
-        return;
-    } if (username.includes('/^[a-zа-яії0-9_-]{8, 16}$/')) {
-        return
-    }
 
-    form.submit(); 
-    if (error !== '') {
-        document.getElementById('errorMessages').innerText = error;
-        return false;
-    }
+
+document.addEventListener("DOMContentLoaded", function () {
+    const form = document.querySelector('#registrationForm');
+    const errorDiv = document.getElementById('errorMessages');
+
+    form.addEventListener('submit', function (event) {
+        event.preventDefault();
+        const username = document.getElementById('username').value.trim();
+        const email = document.getElementById('email').value.trim();
+        const password = document.getElementById('password').value;
+        let errorMessage = '';
+        // Перевірка імені користувача
+        if (username === '') {
+            errorMessage += 'Please enter a username.\n';
+        }
+        // Перевірка електронної адреси
+        if (!emailIsValid(email)) {
+            errorMessage += 'Please enter a valid email address.\n';
+        }
+        // Перевірка пароля
+        if (password.length < 8) {
+            errorMessage += 'Password must be at least 8 characters long.\n';
+        }
+        if (!passwordIsValid(password)) {
+            errorMessage += 'Password must contain at least one uppercase letter, one lowercase letter, one number, and one special character.\n';
+        }
+        if (errorMessage.length > 0) {
+            errorDiv.innerText = errorMessage;
+            return;
+        }
+        form.reset(); // Скидання форми після успішної реєстрації
+        errorDiv.innerText = 'Registration successful!';
+    });
     
     function emailIsValid(email) { 
         return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email); 
     }
-    document.getElementById('errorMessages').innerText = '';
-    form.innerText = '';
+    
+    function passwordIsValid(password) {
+        const uppercasePattern = /[A-Z]/;
+        const lowercasePattern = /[a-z]/;
+        const numberPattern = /[0-9]/;
+        const specialCharPattern = /[\^$*.[]{}()?""!@#%&><':;|_~``,<]/;
+        return uppercasePattern.test(password) &&
+               lowercasePattern.test(password) &&
+               numberPattern.test(password) &&
+               specialCharPattern.test(password);
+    };
 });
-
