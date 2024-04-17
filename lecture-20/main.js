@@ -1,22 +1,33 @@
-const person = {
-    name: 'Natali',
-    age: 25,
-};
-console.log(person);
+// const person = {
+//     name: 'Natali',
+//     age: 25,
+// };
+// console.log(person);
 
 // Змінити тип властивості name з рядка на об'єкт, 
 // з ключами firstName та lastName. Надати значення цим властивостям. 
 // Вивести значення властивостей об'єкту на консоль.
-person.name = {
-        fName: 'Nataliya',
-        lName: 'Dvornichenko',
-    };
-console.log(person.name);
+// person.name = {
+//         fName: 'Nataliya',
+//         lName: 'Dvornichenko',
+//     };
+// console.log(person.name);
 
 // Створити метод об'єкту bio(), 
 // що виводить на консоль ім'я, прізвище та вік person.
-const bio = {...person};
-console.log(bio);
+
+const person = {
+    name: {
+    fName: 'Nataliya',
+    lName: 'Dvornichenko',
+    },
+    age: 25,
+    bio: function() {
+    console.log(`Name: ${this.name.fName} ${this.name.lName}, Age: ${this.age}`);
+    }
+    };
+    
+    person.bio();
 
 // Створити метод об'єкту introduceSelf, 
 // що виводить на консоль Hi! I'm firstName.
@@ -33,19 +44,20 @@ console.log(person.name.introduceSelf());
 // Створити функцію-шаблон createPerson, що приймає аргумент name 
 // та повертає новий об'єкт з властивістю name та методом introduceSelf. 
 // Створити за допомогою createPerson 2 екземпляри об'єкта.
+
 function createPerson(name) {
-    obj = {};
+    let obj = {};
     obj.name = name;
-    introduceSelf = function() {
-        return( "Hi! I\'m " + obj.name );
+    obj.introduceSelf = function() {
+        return "Hi! I\'m " + obj.name;
       };
     return obj;
 };
-console.log(createPerson("Mary"));
-console.log(introduceSelf("Mary"));
-
-console.log(createPerson("Tom"));
-console.log(introduceSelf("Tom"));
+const mary = createPerson("Mary");
+    console.log(mary.introduceSelf());
+    
+    const tom = createPerson("Tom");
+    console.log(tom.introduceSelf());
 
 // Створити функцію-конструктор Person, що приймає аргумент name 
 // та повертає новий об'єкт з властивістю name та методом introduceSelf.
@@ -87,7 +99,7 @@ DirtyMartini = {
         return(this.name + '\n' + this.ing1 + '\n' + this.ing2 + ' (0.0351951ml)\n' + this.ing3 + '\n' + this.ing4);
     },
     excuse_my_french() {
-        return(this.name + '\n170.4786 ml de gin\n' + '1 trait de vermouth sec (0.0351951ml)\n' + '28.4131 ml de saumure du pot d\'olive\n' + '4 olives vertes farcies');
+        return(this.name + '\n170.4786 ml de gin\n' + '1 dash de vermouth sec (0.0351951ml)\n' + '28.4131 ml de saumure du pot d\'olive\n' + '4 olives vertes farcies');
     },
 };
 console.log(DirtyMartini.english_please());
