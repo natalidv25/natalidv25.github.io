@@ -19,16 +19,26 @@
    function multiply(n1, n2) {
       return n1 * n2;
    }
+   function sum(n1, n2) {
+    return n1 + n2;
+    }
+    
+    function multiply(n1, n2) {
+    return n1 * n2;
+    }
+    
+    function calculate(operation, initialValue, numbers) {
+    let result = initialValue;
+    for (const number of numbers) {
+    result = operation(result, number);
+    }
+    return result;
+    }
+    
+    console.log(calculate(sum, 0, [1, 2, 4])); // Виведе 7
+    console.log(calculate(multiply, 1, [1, 2, 4])); // Виведе 8
 
-function calculate(operation, initialValue, numbers) {
-    if (operation === sum) {
-        sum();
-    } else multiply();
-}
-   calculate(sum, 0, [1, 2, 4]);
-   
 
-   calculate(multiply, 1, [1, 2, 4]);
   
 //task2
 let student_names = ["Wick", "Malcolm", "Smith"]
@@ -67,14 +77,15 @@ console.log(array_one);
 
 //task5
 
-Array.prototype.upperCase = function () { 
-    let i; for (i = 0; i < this.length; i++) { 
-        this[i] = this[i].toUpperCase(); 
-    } 
-};
-function myFunc() {
+Array.prototype.upperCase = function() {
+    for (let i = 0; i < this.length; i++) {
+    this[i] = this[i].toUpperCase();
+    }
+    };
+    
+    function myFunc() {
     let arr = ["Algorithm", "Data Structure", "Operating System", "html"];
     arr.upperCase();
     console.log(arr);
-}
-myFunc();
+    }
+    myFunc();
